@@ -1,0 +1,50 @@
+let myName: String = "Ena"
+let action = "learning Swift"
+print("My name is \(myName) and I am \(action).")
+
+var grad: String!
+var wish: String?
+grad = "Frankfurt"
+wish = "want to visit"
+if let wish = wish {
+    print("I \(wish) \(grad) again.")
+}
+
+let c = 15
+var d = 5
+d = c - d
+print (d)
+
+let five = 5
+var newValue = five * 2 / 5
+print (newValue)
+print(newValue % 2 * 1)
+var newNewValue = -five
+print(-newNewValue)
+
+
+let myBestFriendsName = "Mia"
+if myName == myBestFriendsName {
+    print ("Me and my best friend have a same name.")
+}
+if myName != myBestFriendsName{
+    print("My name is Ena and my best friend's name is Mia.")
+}
+
+
+var strings = [String]()
+var shoppingList = ["Eggs", "Milk"]
+let additionalList = ["Cookies", "Bananas"]
+let newList = shoppingList + additionalList
+let toDoList = ["Wash laundry", "Clean the room"]
+var doAndShopList = newList + toDoList
+print(doAndShopList)
+
+doAndShopList.append("Cook dinner")
+print (doAndShopList.count)
+print (doAndShopList)
+print(doAndShopList[4])
+doAndShopList.insert("Do homework", atIndex: 0)
+print (doAndShopList)
+doAndShopList.removeAtIndex(0)
+print (doAndShopList)
