@@ -1,0 +1,568 @@
+//Kontrola toka
+//Petlje
+//For in
+for number in 1...3 {
+    print("\(number) times 5 is \(number*5)")
+}
+//moj primjer
+
+for everyNumber in 1...3 {
+    print("\(everyNumber) minus 1 is \(everyNumber - 1)")
+}
+
+//underscore
+for _ in 1...3 {
+    print("Hello World")
+}
+
+
+//moj primjer
+for _ in 1...3{
+    print ("We are learning Swift")
+}
+
+//Iteriranje kroz kolekcije
+let names = ["Alex", "Tracy", "Jack"]
+for name in names {
+    print("Hello, \(name)")
+}
+//moj primjer
+ var imena = ["Ena", "Merima"]
+for ime in imena {
+    print("\(ime) uci Swift.")
+}
+
+let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+for (animal, legCount) in numberOfLegs {
+    print("\(animal) has \(legCount) legs")
+}
+
+//moj primjer
+let familyAge = ["My Father": 50, "My Mother": 50, "My Aunt": 52]
+for (member, age) in familyAge {
+    print("\(member) is \(age) years old.")
+}
+
+//While
+
+var numbers2 = [3, 2, 5]
+while numbers2.isEmpty == false {
+print( "\(numbers2.removeAtIndex(0)) is out!")
+}
+
+//moj primjer
+while imena.isEmpty == false {
+print ("\(imena.removeAtIndex(0)) learns Swift.")
+}
+
+//Repeat-while
+var count = 3
+repeat{
+print(count)
+count -= 1
+} while count > 0
+
+//moj primjer
+
+var someNumber = 15
+repeat{
+print(someNumber)
+someNumber -= 5
+}
+while someNumber >= 0
+
+//Grananje
+// If naredba
+
+var temperature = 22
+if temperature >= 18 {
+print("It would be good to wear shorts")
+}
+
+//moj primjer 
+
+var childAge = 2
+if childAge < 3 {
+print("Do not let a child play with small toys")
+}
+
+//If else
+temperature = 15
+if temperature >= 18 {
+print("It would be good to wear shorts")
+} else {
+print ("It would be good to wear pants")
+}
+
+//moj primjer
+childAge = 5
+if childAge < 3 {
+print("Do not let a child play with small toys")
+} else {
+print ("Still watch over your child")
+}
+
+if temperature >= 18 {
+print("It would be good to wear shorts")
+} else if temperature >= 0 && temperature < 18 {
+print("It would be good to wear pants")
+} else {
+print ("It is best to stay at home")
+}
+
+//moj primjer
+
+if childAge < 3 {
+print("Do not let a child play with small toys")
+} else if childAge > 3 && childAge <= 5 {
+print("Still watch over your child")
+} else {
+print("Your child can play with any toy")
+}
+
+
+//Switch
+
+let character: Character = "e"
+switch character {
+case "a", "e", "i", "o", "u":
+print("\(character) is a vowel")
+case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+print("\(character) is a consonant")
+default: 
+print("\(character) is not a vowel or a consonant")
+}
+
+//moj primjer
+
+let char: Character = "ä"
+switch char{
+case "Ä", "ä", "Ü", "ü", "Ö", "ö":
+print("These are the letters of German alphabet")
+case "w", "W", "Y", "y":
+print("These are the letters of English alphabet")
+default:
+print("These letters could be from any alphabet")
+}
+
+let age = 28
+switch age {
+case 1..<18:
+print("Underaged")
+default:
+print("Adult")
+}
+
+
+//moj primjer
+
+let teenAge = 14
+switch teenAge {
+case 10..<15:
+print("This person is a younger minor")
+case 15...18:
+print("This person is an older minor")
+default:
+print("This person is not a minor")
+}
+
+//Kontrola transfera
+//Continue
+
+let string = "Hello World"
+var stringWithoutVowels = ""
+for character1 in string.characters {
+switch character1 {
+case "a", "e", "i", "o", "u":
+continue
+default:
+stringWithoutVowels.append(character1)
+}
+}
+print(stringWithoutVowels)
+
+//moj primjer
+
+let string2 = "Ena Topoljak"
+var stringWithoutVowels2 = ""
+for character2 in string2.characters {
+switch character2{
+case "E", "a", "e", "i", "o", "u":
+continue
+default:
+stringWithoutVowels2.append(character2)
+}
+}
+print (stringWithoutVowels2)
+
+//Break
+
+let array = [1, 4, 15, -2, 9]
+for number in array {
+if number > 0 {
+print(number)
+} else {
+break
+}
+}
+
+let letters: [String] = ["a", "e", "ä", "i", "o", "u"]
+
+for letter in letters {
+
+if letter == "ä" {
+
+print("This is the wrong alphabet")
+
+break
+
+} else {
+
+print("\(letter)")
+
+}
+
+}
+ //Fallthrough
+
+let integerToDescribe = 5
+var description = "The number \(integerToDescribe) is"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+description += "a prime number, and also"
+fallthrough
+default:
+description += " an integer."
+}
+print (description)
+
+//moj primjer
+
+let aLetter: Character = "ä"
+var desc = "\(aLetter) is a letter of"
+switch aLetter {
+case "Ä", "ä", "Ü", "ü", "Ö", "ö":
+desc += " German "
+fallthrough
+default:
+desc += "alphabet"
+}
+print(desc)
+
+//Guard
+
+let ages = [27, 31, 15, 17]
+for age in ages {
+guard age > 18 else {
+print("We have a minor")
+break
+}
+print("He is an adult")
+}
+
+let weights = [60, 67, 80, 49, 75]
+for weight in weights{
+guard weight > 50 else {
+print("You are not allowed to donate blood.")
+break
+}
+print("Proceed with your donation.")
+}
+
+
+//Funkcije
+//Deifinisanje i pozivanje
+
+func printHelloWorld() {
+print("Hello World")
+}
+
+func add(a: Int, b: Int) -> Int {
+return a + b
+}
+
+printHelloWorld()
+
+var aNumber = add(3, b: 7)
+print(aNumber)
+
+//moj primjer
+
+func introduceMyself() {
+print("Hello, my name is Ena and I am 23 years old.")
+}
+
+introduceMyself()
+
+func multiplication(x: Int, y: Int) -> Int {
+return x * y
+}
+
+var product = multiplication(5, y: 5)
+print (product)
+
+//Funkcije bez argumenata
+
+func sayHelloWorld () -> String {
+return "Hello world!"
+}
+print(sayHelloWorld())
+
+//moj primjer 
+
+func reply () -> String {
+return "Hello to you too!"
+}
+print(reply())
+
+//Funkcije sa argumentima
+
+func say (greeting: String, to: String) {
+print ("\(greeting), \(to)")
+}
+
+say ("Hi", to: "Rick")
+say ("Hello", to: "John")
+
+//moj primjer 
+
+func ask (name: String, question: String) {
+print ("\(name), \(question)")
+}
+ask("Sandy", question: "how are you?")
+
+//Funkcije koje ne vracaju vrijednost
+
+func printTheArgument (argument: String) {
+print (argument)
+}
+printTheArgument ("Hello")
+
+//moj primjer
+
+func favoriteSport (sport: String) {
+print (sport)
+}
+favoriteSport ("Tennis")
+
+//Funkcije koje vracaju mjesovite vrijednosti
+
+func minMax (array: [Int]) -> (min: Int, max: Int) {
+var newMin = array[0]
+var newMax = array[0]
+for value in array[1..<array.count] {
+if value < newMin {
+newMin = value
+} else if value > newMax {
+newMax = value
+}
+}
+return (newMin, newMax)
+}
+
+let bounds = minMax([8, -6, 2, 109, 3, 71])
+print ("min is \(bounds.min) and max is \(bounds.max)")
+
+//moj primjer
+
+func twoMins (array: [Int]) -> (minimum: Int, nextMinimum: Int) {
+var newMinimum = array[0]
+var newNextMinimum = array[0]
+for value in array[1..<array.count] {
+if value < newMinimum {
+newMinimum = value
+} else if value < newNextMinimum && value > newMinimum {
+newNextMinimum = value
+}
+}
+return (newMinimum, newNextMinimum)
+}
+let bounds2 = twoMins([8, -6, 2, 109, 3, 71])
+print ("min is \(bounds2.minimum) and second min is \(bounds2.nextMinimum)")
+
+
+//Imena argumenata funkcije
+
+func someFunction (firstArg: String, secondArg: Int) {
+print(firstArg, secondArg)
+}
+
+someFunction ("Hello", secondArg: 3)
+
+//moj primjer
+
+func me (fName: String, lName: String) {
+print("I am \(fName) \(lName)")
+}
+
+me("Ena", lName: "Topoljak")
+
+//Specifikovanje eksternog imena
+
+func sayHi(to person: String, and anotherPerson: String) -> String {
+return("Hi \(person) and \(anotherPerson)")
+}
+
+print(sayHi(to: "Ena", and: "Merima"))
+
+//moj primjer
+
+func myParents(are myMom: String, and myDad: String) -> String {
+return("My parents are \(myMom) and \(myDad)")
+}
+
+print(myParents(are: "Vlatka", and:"Enes"))
+
+//Standardne vrijednosti argumenta
+
+func someFunction(parameterWithDefault: Int = 12) {
+print(parameterWithDefault)
+}
+someFunction(6)
+someFunction()
+
+//moj primjer
+
+func gender(defaultParameter: String = "Unspecified") {
+print(defaultParameter)
+}
+
+gender("Female")
+gender()
+
+//Variadicni argumenti funkcije
+
+func arithmeticMean(numbers: Double...) -> Double {
+var total: Double = 0
+for number in numbers {
+total += number
+}
+return total / Double(numbers.count)
+}
+print(arithmeticMean(1, 2, 3, 4, 5))
+print(arithmeticMean(3, 8.25, 18.75))
+
+//In-out argumneti
+
+func swapTwoInts(inout a: Int, inout _ b: Int) {
+let temporaryA = a
+a = b
+b = temporaryA
+}
+
+var someInt = 3
+var anotherInt = 107
+swapTwoInts(&someInt, &anotherInt)
+print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
+
+//moj primjer
+
+func connectStrings(inout first: String, inout _ last: String)->String {
+return(first + last)
+}
+
+var myFirstName = "Ena"
+var myLastName = "Topoljak"
+print(connectStrings(&myFirstName, &myLastName))
+
+//Funkcija kao tip
+
+
+func addTwoInts(a: Int, _ b: Int) -> Int {
+return a + b
+}
+var mathFunction: (Int, Int) -> Int = addTwoInts
+print(mathFunction(3, 9))
+
+//moj primjer 
+
+
+func substractTwoInts(a: Int, _ b: Int) -> Int {
+return a - b
+}
+var anotherMathFunction: (Int, Int) -> Int = substractTwoInts
+print(anotherMathFunction(15, 10))
+
+//Ugnijezdjene funkcije
+
+func printThreeTimesHelloWorld() {
+func printNestedHelloWorld() {
+print("Hello World")
+}
+for _ in 1...3 {
+printNestedHelloWorld()
+}
+}
+
+printThreeTimesHelloWorld()
+
+//Closure
+
+let greet = { (name: String) -> Void in
+print("Hello \(name)")
+}
+greet("Jill")
+
+//moj primjer
+
+let greetBack  = { (name: String) -> Void in
+print("\(name) says Hi!")
+}
+greetBack("Jill")
+
+//Enumeracije
+
+enum CompassPoint {
+case North
+case South
+case East
+case West
+
+}
+
+func whereToHead(direction: CompassPoint) {
+switch direction {
+case .North:
+print("Wear jacket")
+case .South:
+print("Wear shorts")
+default:
+print("Take care")
+}
+}
+
+whereToHead(.North)
+
+//moj primjer + raw value
+
+enum Seasons: Int {
+case Spring = 1
+case Summer
+case Autmn
+case Winter
+}
+
+func seasonalTips (tips: Seasons) {
+switch tips {
+case .Spring:
+print("Have an allergy medicine on you.")
+case .Summer:
+print("Bring a repellent spray on the seaside.")
+case .Autmn:
+print("Have a small umbrella in your bag, it will probably rain.")
+case .Winter:
+print("Wear warm jacket, gloves and a hat.")
+}
+}
+
+seasonalTips(.Summer)
+
+print(Seasons.Spring.rawValue)
+print(Seasons.Summer.rawValue)
+print(Seasons.Autmn.rawValue)
+print(Seasons.Winter.rawValue)
+
+let aSeason = Seasons(rawValue: 3)
+print (aSeason)
+
+
