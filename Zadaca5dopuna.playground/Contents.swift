@@ -37,14 +37,11 @@ class Person {
         self.init(yearOfBirth: 1990, location: Location())
     }
     
-    
     func introduction() -> String {
         return "Hi, my name is \(name) \(lastName). Age \(age)."
         
     }
 }
-
-
 
 class Parent: Person {
     var children : [Person]
@@ -65,7 +62,6 @@ class Parent: Person {
     }
     
 }
-
 
 let mirko = Person(name: "Mirko", lastName: "Babic", yearOfBirth: 1987, location: Location())
 let nedim = Person(name: "Nedim", lastName: "Sabic", yearOfBirth: 1982, location: Location())
@@ -93,7 +89,6 @@ class Student: Person {
                 sum += grade
             }
             return Double(sum)/Double(grades.count)
-            
         }
     }
     
@@ -101,28 +96,24 @@ class Student: Person {
         self.attendingCourses = attendingCourses
         self.grades = grades
         super.init(name: name, lastName: lastName, yearOfBirth: yearOfBirth, location: location)
-        
-        
     }
     
     override func introduction () -> String {
         let introduceMyself = super.introduction() + "I' m a student at \(faculty). My favourite course is " + attendingCourses.first!.aboutCourse()
-        guard (father?.savings != nil && mother?.savings != nil) else {
+        guard (father?.savings == nil && mother?.savings == nil) else {
             if let value = father?.savings {
             return introduceMyself + "My father has \(value) savings."
             } else
-            if let value2 = mother!.savings {
+            if let value2 = mother?.savings {
                 return introduceMyself + "My mother has \(value2) savings."
             } else {
-                return introduceMyself + "We are broke."
+               return introduceMyself + "My parents have $ \(father!.savings! + mother!.savings!) savings. "
             }
         }
-        return introduceMyself + "My parents have $ \(father!.savings! + mother!.savings!) savings. "
+        return introduceMyself + "We are broke."
+        
         }
     }
-
-    
-
 
 let iOSDevelopment = Course(teacher: mirko, courseName: "iOS Development")
 let seo = Course(teacher: nedim, courseName: "SEO")
