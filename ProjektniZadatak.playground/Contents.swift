@@ -83,12 +83,15 @@ extension Driver: CarMonitoringDelegate {
             let newAddFuel = car!.fuelTank - car!.fuelLevel
             car?.fuelLevel = newAddFuel
             delayedPrint("Added fuel. Current fuel level \(car!.fuelLevel)")
+            delayedPrint("Car crossed \(car?.crossedKilometers) km in this run")
             return
             }
             car?.fuelLevel += addFuel
             delayedPrint("Added fuel. Current fuel level \(car!.fuelLevel)")
+            delayedPrint("Car crossed \(car?.crossedKilometers) km in this run")
         } else {
             delayedPrint("I will add some gas later")
+            delayedPrint("Car crossed \(car?.crossedKilometers) km in this run")
             
         }
     }
@@ -97,6 +100,7 @@ extension Driver: CarMonitoringDelegate {
         let addFuel = Int(arc4random() % 100)
         car?.fuelLevel += addFuel
         delayedPrint("Added fuel. Current fuel level \(car!.fuelLevel)")
+        delayedPrint("Car crossed \(car?.crossedKilometers) km in this run")
 }
 }
 
@@ -160,9 +164,7 @@ class Car: RandomNumberGenerator{
             fuelLevel -= 1
             crossedKilometers += 10
             broken = randomBool()
-        
-        
-            
+      
         }
     }
 }
@@ -175,6 +177,7 @@ car.delegate = driver
 driver.mechanic = mechanic
 for value in 1...10 {
     driver.driveCar()
+    
 }
 delayedPrint("Car crossed \(car.crossedKilometers) km in this run")
 
