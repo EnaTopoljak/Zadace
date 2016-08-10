@@ -129,14 +129,15 @@ extension Int {
 }
 
 let myImaginarySister = Person (name: "Mia", lastName: "Batic", yearOfBirth: 1993, location: Location())
-let father = Parent(name: "Enes", lastName: "Topoljak", yearOfBirth: 1966, location: Location(), children: [student, myImaginarySister], savings: nil)
-let mother = Parent(name: "Vlatka", lastName: "Topoljak", yearOfBirth: 1965, location: Location(), children: [], savings: nil)
+let father = Parent(name: "Enes", lastName: "Topoljak", yearOfBirth: 1966, location: Location(), children: [student, myImaginarySister], savings: 500)
+let mother = Parent(name: "Vlatka", lastName: "Topoljak", yearOfBirth: 1965, location: Location(), children: [student, myImaginarySister
+], savings: 500)
 
 print(father.introduction())
 print(mother.introduction())
 
 print("Student's age in days is " + "\(student.age.ageInDays())")
-mother.savings = 300
+
 student.father = father
 student.mother = mother
 print(student.introduction())
