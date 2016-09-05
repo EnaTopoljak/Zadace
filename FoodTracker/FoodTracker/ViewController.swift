@@ -20,12 +20,25 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var ratingControl: RatingControl!
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meal: Meal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
+        checkValidMealName()
     }
     
 //MARK: UITextFieldDelegate
+    func textFieldDidBeginEditing(textField: UITextField) {
+        saveButton.enabled = false
+    }
+    func checkValidMealName () {
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // hide the keyboard
         textField.resignFirstResponder()
@@ -33,6 +46,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     func textFieldDidEndEditing(textField: UITextField) {
         mealNameLabel.text = textField.text
+        checkValidMealName()
+        navigationItem.title = textField.text
     }
     
 //MARK: UIImagePickerControllerDelegate
@@ -45,6 +60,24 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         photoImageView.image = selectedImage
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+//MARK: Navigation
+    
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if saveButton === sender {
+            let name = nameTextField.text ?? ""
+            let photo = photoImageView.image
+            let rating = ratingControl.rating
+            
+            meal = Meal(name: name, photo: photo, rating: rating)
+        }
+    }
+    
 //MARK: Actions
     
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
