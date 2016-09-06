@@ -77,11 +77,11 @@ class MealTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             meals.removeAtIndex(indexPath.row)
-            saveMeals()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        saveMeals()
     }
     
 
@@ -124,25 +124,25 @@ class MealTableViewController: UITableViewController {
                 meals[selectedIndexPath.row] =  meal
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             } else {
-                saveMeals()
             let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
             meals.append(meal)
             tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+             saveMeals()
         }
     }
     //MARK: NSCoding
     
     func saveMeals() {
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path!)
-        if !isSuccessfulSave {
+        if isSuccessfulSave == false {
             print("Failed to save meals...")
         }
-        
+    }
+    
         func loadMeals() -> [Meal]? {
             return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL.path!) as? [Meal]
+            
         }
-    }
-
 }
 
