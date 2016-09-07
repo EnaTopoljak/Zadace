@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UnM-w6-Dxb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Your Expenses-->
+        <scene sceneID="zXK-Rs-Va3">
+            <objects>
+                <tableViewController id="gN7-Vj-zqV" customClass="SpendTrackerTableViewController" customModule="SpendTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" id="tOS-sw-Jyw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpendTrackerTableViewCell" rowHeight="160" id="YmX-Cg-BJ7" customClass="SpendTrackerTableViewCell" customModule="SpendTrackerApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="160"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YmX-Cg-BJ7" id="2pj-jy-gVG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05N-qK-OWw">
+                                            <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount Spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-A2-SXZ">
+                                            <rect key="frame" x="8" y="42" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLS-cX-dCi">
+                                            <rect key="frame" x="8" y="71" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description of the Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C72-R6-iQM">
+                                            <rect key="frame" x="8" y="100" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNx-rz-8Xz">
+                                            <rect key="frame" x="8" y="129" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="WLS-cX-dCi" id="sxz-N4-BDM"/>
+                                    <outlet property="dateLabel" destination="05N-qK-OWw" id="6V8-c4-EiR"/>
+                                    <outlet property="descriptionLabel" destination="VNx-rz-8Xz" id="ZdY-vw-FjE"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="dDC-dr-t6V"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gN7-Vj-zqV" id="fyE-A1-Fag"/>
+                            <outlet property="delegate" destination="gN7-Vj-zqV" id="asX-Oh-b5F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Expenses" id="VYF-Lw-3DU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H2Z-xZ-DUk">
+                            <connections>
+                                <segue destination="kCH-6Y-ugm" kind="presentation" identifier="AddItem" id="OSg-70-HYc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHg-iF-5ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747" y="356"/>
+        </scene>
+        <!--Insert New Expense-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpendTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RIr-qX-Tdn">
+                                <rect key="frame" x="20" y="80" width="560" height="333"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Amout Spent" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05A-YD-x14">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description of the Expense" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5h-d1-Zp0">
+                                        <rect key="frame" x="0.0" y="42" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="21" text="Date of the Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSa-cz-YnN">
+                                        <rect key="frame" x="0.0" y="84" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cqL-2t-ILA">
+                                        <rect key="frame" x="0.0" y="117" width="560" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="494865779.36458898">
+                                            <!--2016-09-06 14:42:59 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="csm-q7-APV"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="05A-YD-x14" firstAttribute="leading" secondItem="RIr-qX-Tdn" secondAttribute="leading" id="KsG-lz-gkP"/>
+                                    <constraint firstItem="wSa-cz-YnN" firstAttribute="top" secondItem="E5h-d1-Zp0" secondAttribute="bottom" constant="12" id="LOk-2j-CRy"/>
+                                    <constraint firstAttribute="trailing" secondItem="wSa-cz-YnN" secondAttribute="trailing" id="NpO-U2-04g"/>
+                                    <constraint firstAttribute="trailing" secondItem="E5h-d1-Zp0" secondAttribute="trailing" id="Rqy-UM-zYi"/>
+                                    <constraint firstItem="E5h-d1-Zp0" firstAttribute="leading" secondItem="RIr-qX-Tdn" secondAttribute="leading" id="Yby-UK-vd4"/>
+                                    <constraint firstItem="cqL-2t-ILA" firstAttribute="leading" secondItem="RIr-qX-Tdn" secondAttribute="leading" id="jsM-u4-CmK"/>
+                                    <constraint firstItem="wSa-cz-YnN" firstAttribute="leading" secondItem="RIr-qX-Tdn" secondAttribute="leading" id="kmF-mx-eOC"/>
+                                    <constraint firstItem="cqL-2t-ILA" firstAttribute="top" secondItem="wSa-cz-YnN" secondAttribute="bottom" constant="12" id="mSF-lY-ScR"/>
+                                    <constraint firstAttribute="trailing" secondItem="05A-YD-x14" secondAttribute="trailing" id="rdI-qW-Gi3"/>
+                                    <constraint firstAttribute="trailing" secondItem="cqL-2t-ILA" secondAttribute="trailing" id="sIv-1B-03C"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="RIr-qX-Tdn" secondAttribute="trailing" id="Uga-7F-3nT"/>
+                            <constraint firstItem="RIr-qX-Tdn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="g79-Cq-YIW"/>
+                            <constraint firstItem="RIr-qX-Tdn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iv7-yS-Sxm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Insert New Expense" id="X42-ul-LVA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sZg-Pt-CYZ">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="kvc-mE-XV8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jxm-oo-Lby">
+                            <connections>
+                                <segue destination="pOE-H7-zaW" kind="unwind" unwindAction="unwindToExpensesList:" id="H6R-Xb-heE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="05A-YD-x14" id="Vb4-HL-XUj"/>
+                        <outlet property="datePicker" destination="cqL-2t-ILA" id="tQc-Zj-7Qx"/>
+                        <outlet property="descriptionTextField" destination="E5h-d1-Zp0" id="pSz-8J-BBP"/>
+                        <outlet property="saveButton" destination="jxm-oo-Lby" id="xE9-Fa-v0Y"/>
+                        <outlet property="selectedDate" destination="wSa-cz-YnN" id="gsC-Wx-RXR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="pOE-H7-zaW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="inG-hs-9oc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UnM-w6-Dxb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k1i-qT-pjd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gN7-Vj-zqV" kind="relationship" relationship="rootViewController" id="soM-oB-3UU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVI-LR-vrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XLD-3s-4kZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kCH-6Y-ugm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6FB-ng-72A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nM8-Vq-me1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WjS-x5-O5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485" y="712"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dDC-dr-t6V"/>
+    </inferredMetricsTieBreakers>
+</document>
