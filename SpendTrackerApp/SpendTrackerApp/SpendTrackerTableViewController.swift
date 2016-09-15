@@ -13,6 +13,7 @@ class SpendTrackerTableViewController: UITableViewController {
     //MARK: Properties
     
     var spendings = [SpendTracker]()
+   let dateComponents = NSDateComponents()
 
     override func viewDidLoad() {
         super.viewDidLoad()
