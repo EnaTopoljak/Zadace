@@ -59,7 +59,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     func checkValidMealName() {
         // Disable the Save button if the text field is empty.
         let text = nameTextField.text ?? ""
-        saveButton.enabled = text.isEmpty
+        saveButton.enabled = !text.isEmpty
     }
     
     // MARK: UIImagePickerControllerDelegate
@@ -119,6 +119,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
+        
+        presentViewController(imagePickerController, animated: true, completion: nil)
     }
 
 }
