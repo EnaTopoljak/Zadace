@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52FFA1F01D92D3A8009B060A"
+               BlueprintIdentifier = "0C0F33DB1D92D38F0081E465"
                BuildableName = "Dopuna.app"
                BlueprintName = "Dopuna"
                ReferencedContainer = "container:Dopuna.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52FFA2041D92D3A9009B060A"
+               BlueprintIdentifier = "0C0F33EF1D92D3900081E465"
                BuildableName = "DopunaTests.xctest"
                BlueprintName = "DopunaTests"
                ReferencedContainer = "container:Dopuna.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52FFA1F01D92D3A8009B060A"
+            BlueprintIdentifier = "0C0F33DB1D92D38F0081E465"
             BuildableName = "Dopuna.app"
             BlueprintName = "Dopuna"
             ReferencedContainer = "container:Dopuna.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52FFA1F01D92D3A8009B060A"
+            BlueprintIdentifier = "0C0F33DB1D92D38F0081E465"
             BuildableName = "Dopuna.app"
             BlueprintName = "Dopuna"
             ReferencedContainer = "container:Dopuna.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52FFA1F01D92D3A8009B060A"
+            BlueprintIdentifier = "0C0F33DB1D92D38F0081E465"
             BuildableName = "Dopuna.app"
             BlueprintName = "Dopuna"
             ReferencedContainer = "container:Dopuna.xcodeproj">

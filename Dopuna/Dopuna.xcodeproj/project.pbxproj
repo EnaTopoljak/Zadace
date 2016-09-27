@@ -7,52 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52FFA1F51D92D3A8009B060A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA1F41D92D3A8009B060A /* AppDelegate.swift */; };
-		52FFA1F71D92D3A8009B060A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA1F61D92D3A8009B060A /* ViewController.swift */; };
-		52FFA1FA1D92D3A8009B060A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFA1F81D92D3A8009B060A /* Main.storyboard */; };
-		52FFA1FC1D92D3A8009B060A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FFA1FB1D92D3A8009B060A /* Assets.xcassets */; };
-		52FFA1FF1D92D3A8009B060A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFA1FD1D92D3A8009B060A /* LaunchScreen.storyboard */; };
-		52FFA20A1D92D3A9009B060A /* DopunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA2091D92D3A9009B060A /* DopunaTests.swift */; };
-		52FFA2151D92E954009B060A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA2141D92E954009B060A /* Contact.swift */; };
-		52FFA2171D92F4FA009B060A /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA2161D92F4FA009B060A /* ContactTableViewCell.swift */; };
-		52FFA2191D92FC4C009B060A /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA2181D92FC4C009B060A /* ContactTableViewController.swift */; };
+		0C0F33E01D92D3900081E465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F33DF1D92D3900081E465 /* AppDelegate.swift */; };
+		0C0F33E21D92D3900081E465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F33E11D92D3900081E465 /* ViewController.swift */; };
+		0C0F33E51D92D3900081E465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0F33E31D92D3900081E465 /* Main.storyboard */; };
+		0C0F33E71D92D3900081E465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0F33E61D92D3900081E465 /* Assets.xcassets */; };
+		0C0F33EA1D92D3900081E465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0F33E81D92D3900081E465 /* LaunchScreen.storyboard */; };
+		0C0F33F51D92D3900081E465 /* DopunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F33F41D92D3900081E465 /* DopunaTests.swift */; };
+		0C0F34061D92F5DC0081E465 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F34051D92F5DC0081E465 /* ContactTableViewCell.swift */; };
+		0C0F34081D92F66E0081E465 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F34071D92F66E0081E465 /* Contact.swift */; };
+		0C0F340A1D92FC510081E465 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F34091D92FC510081E465 /* ContactTableViewController.swift */; };
+		528AEB0A1D9ADFDD0042E5AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AEB091D9ADFDD0042E5AA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52FFA2061D92D3A9009B060A /* PBXContainerItemProxy */ = {
+		0C0F33F11D92D3900081E465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52FFA1E91D92D3A7009B060A /* Project object */;
+			containerPortal = 0C0F33D41D92D38F0081E465 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 52FFA1F01D92D3A8009B060A;
+			remoteGlobalIDString = 0C0F33DB1D92D38F0081E465;
 			remoteInfo = Dopuna;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		52FFA1F11D92D3A8009B060A /* Dopuna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopuna.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		52FFA1F41D92D3A8009B060A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52FFA1F61D92D3A8009B060A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52FFA1F91D92D3A8009B060A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		52FFA1FB1D92D3A8009B060A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52FFA1FE1D92D3A8009B060A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		52FFA2001D92D3A8009B060A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52FFA2051D92D3A9009B060A /* DopunaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopunaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52FFA2091D92D3A9009B060A /* DopunaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopunaTests.swift; sourceTree = "<group>"; };
-		52FFA20B1D92D3A9009B060A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52FFA2141D92E954009B060A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../Contact.swift; sourceTree = "<group>"; };
-		52FFA2161D92F4FA009B060A /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
-		52FFA2181D92FC4C009B060A /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		0C0F33DC1D92D38F0081E465 /* Dopuna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopuna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0F33DF1D92D3900081E465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C0F33E11D92D3900081E465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C0F33E41D92D3900081E465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C0F33E61D92D3900081E465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C0F33E91D92D3900081E465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C0F33EB1D92D3900081E465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C0F33F01D92D3900081E465 /* DopunaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopunaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0F33F41D92D3900081E465 /* DopunaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopunaTests.swift; sourceTree = "<group>"; };
+		0C0F33F61D92D3900081E465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C0F34051D92F5DC0081E465 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = ../ContactTableViewCell.swift; sourceTree = "<group>"; };
+		0C0F34071D92F66E0081E465 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../Contact.swift; sourceTree = "<group>"; };
+		0C0F34091D92FC510081E465 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		528AEB091D9ADFDD0042E5AA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52FFA1EE1D92D3A8009B060A /* Frameworks */ = {
+		0C0F33D91D92D38F0081E465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FFA2021D92D3A9009B060A /* Frameworks */ = {
+		0C0F33ED1D92D3900081E465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,45 +64,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52FFA1E81D92D3A7009B060A = {
+		0C0F33D31D92D38F0081E465 = {
 			isa = PBXGroup;
 			children = (
-				52FFA1F31D92D3A8009B060A /* Dopuna */,
-				52FFA2081D92D3A9009B060A /* DopunaTests */,
-				52FFA1F21D92D3A8009B060A /* Products */,
+				0C0F33DE1D92D38F0081E465 /* Dopuna */,
+				0C0F33F31D92D3900081E465 /* DopunaTests */,
+				0C0F33DD1D92D38F0081E465 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		52FFA1F21D92D3A8009B060A /* Products */ = {
+		0C0F33DD1D92D38F0081E465 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52FFA1F11D92D3A8009B060A /* Dopuna.app */,
-				52FFA2051D92D3A9009B060A /* DopunaTests.xctest */,
+				0C0F33DC1D92D38F0081E465 /* Dopuna.app */,
+				0C0F33F01D92D3900081E465 /* DopunaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52FFA1F31D92D3A8009B060A /* Dopuna */ = {
+		0C0F33DE1D92D38F0081E465 /* Dopuna */ = {
 			isa = PBXGroup;
 			children = (
-				52FFA1FB1D92D3A8009B060A /* Assets.xcassets */,
-				52FFA2161D92F4FA009B060A /* ContactTableViewCell.swift */,
-				52FFA1F41D92D3A8009B060A /* AppDelegate.swift */,
-				52FFA1F61D92D3A8009B060A /* ViewController.swift */,
-				52FFA1F81D92D3A8009B060A /* Main.storyboard */,
-				52FFA2181D92FC4C009B060A /* ContactTableViewController.swift */,
-				52FFA2141D92E954009B060A /* Contact.swift */,
-				52FFA1FD1D92D3A8009B060A /* LaunchScreen.storyboard */,
-				52FFA2001D92D3A8009B060A /* Info.plist */,
+				0C0F33DF1D92D3900081E465 /* AppDelegate.swift */,
+				0C0F33E11D92D3900081E465 /* ViewController.swift */,
+				0C0F34071D92F66E0081E465 /* Contact.swift */,
+				0C0F34051D92F5DC0081E465 /* ContactTableViewCell.swift */,
+				0C0F33E31D92D3900081E465 /* Main.storyboard */,
+				528AEB091D9ADFDD0042E5AA /* MainViewController.swift */,
+				0C0F34091D92FC510081E465 /* ContactTableViewController.swift */,
+				0C0F33E61D92D3900081E465 /* Assets.xcassets */,
+				0C0F33E81D92D3900081E465 /* LaunchScreen.storyboard */,
+				0C0F33EB1D92D3900081E465 /* Info.plist */,
 			);
 			path = Dopuna;
 			sourceTree = "<group>";
 		};
-		52FFA2081D92D3A9009B060A /* DopunaTests */ = {
+		0C0F33F31D92D3900081E465 /* DopunaTests */ = {
 			isa = PBXGroup;
 			children = (
-				52FFA2091D92D3A9009B060A /* DopunaTests.swift */,
-				52FFA20B1D92D3A9009B060A /* Info.plist */,
+				0C0F33F41D92D3900081E465 /* DopunaTests.swift */,
+				0C0F33F61D92D3900081E465 /* Info.plist */,
 			);
 			path = DopunaTests;
 			sourceTree = "<group>";
@@ -108,13 +111,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52FFA1F01D92D3A8009B060A /* Dopuna */ = {
+		0C0F33DB1D92D38F0081E465 /* Dopuna */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52FFA20E1D92D3A9009B060A /* Build configuration list for PBXNativeTarget "Dopuna" */;
+			buildConfigurationList = 0C0F33F91D92D3900081E465 /* Build configuration list for PBXNativeTarget "Dopuna" */;
 			buildPhases = (
-				52FFA1ED1D92D3A8009B060A /* Sources */,
-				52FFA1EE1D92D3A8009B060A /* Frameworks */,
-				52FFA1EF1D92D3A8009B060A /* Resources */,
+				0C0F33D81D92D38F0081E465 /* Sources */,
+				0C0F33D91D92D38F0081E465 /* Frameworks */,
+				0C0F33DA1D92D38F0081E465 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -122,47 +125,47 @@
 			);
 			name = Dopuna;
 			productName = Dopuna;
-			productReference = 52FFA1F11D92D3A8009B060A /* Dopuna.app */;
+			productReference = 0C0F33DC1D92D38F0081E465 /* Dopuna.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52FFA2041D92D3A9009B060A /* DopunaTests */ = {
+		0C0F33EF1D92D3900081E465 /* DopunaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52FFA2111D92D3A9009B060A /* Build configuration list for PBXNativeTarget "DopunaTests" */;
+			buildConfigurationList = 0C0F33FC1D92D3900081E465 /* Build configuration list for PBXNativeTarget "DopunaTests" */;
 			buildPhases = (
-				52FFA2011D92D3A9009B060A /* Sources */,
-				52FFA2021D92D3A9009B060A /* Frameworks */,
-				52FFA2031D92D3A9009B060A /* Resources */,
+				0C0F33EC1D92D3900081E465 /* Sources */,
+				0C0F33ED1D92D3900081E465 /* Frameworks */,
+				0C0F33EE1D92D3900081E465 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				52FFA2071D92D3A9009B060A /* PBXTargetDependency */,
+				0C0F33F21D92D3900081E465 /* PBXTargetDependency */,
 			);
 			name = DopunaTests;
 			productName = DopunaTests;
-			productReference = 52FFA2051D92D3A9009B060A /* DopunaTests.xctest */;
+			productReference = 0C0F33F01D92D3900081E465 /* DopunaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		52FFA1E91D92D3A7009B060A /* Project object */ = {
+		0C0F33D41D92D38F0081E465 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = ena;
+				ORGANIZATIONNAME = Merima;
 				TargetAttributes = {
-					52FFA1F01D92D3A8009B060A = {
+					0C0F33DB1D92D38F0081E465 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					52FFA2041D92D3A9009B060A = {
+					0C0F33EF1D92D3900081E465 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 52FFA1F01D92D3A8009B060A;
+						TestTargetID = 0C0F33DB1D92D38F0081E465;
 					};
 				};
 			};
-			buildConfigurationList = 52FFA1EC1D92D3A7009B060A /* Build configuration list for PBXProject "Dopuna" */;
+			buildConfigurationList = 0C0F33D71D92D38F0081E465 /* Build configuration list for PBXProject "Dopuna" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -170,29 +173,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 52FFA1E81D92D3A7009B060A;
-			productRefGroup = 52FFA1F21D92D3A8009B060A /* Products */;
+			mainGroup = 0C0F33D31D92D38F0081E465;
+			productRefGroup = 0C0F33DD1D92D38F0081E465 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52FFA1F01D92D3A8009B060A /* Dopuna */,
-				52FFA2041D92D3A9009B060A /* DopunaTests */,
+				0C0F33DB1D92D38F0081E465 /* Dopuna */,
+				0C0F33EF1D92D3900081E465 /* DopunaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52FFA1EF1D92D3A8009B060A /* Resources */ = {
+		0C0F33DA1D92D38F0081E465 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FFA1FF1D92D3A8009B060A /* LaunchScreen.storyboard in Resources */,
-				52FFA1FC1D92D3A8009B060A /* Assets.xcassets in Resources */,
-				52FFA1FA1D92D3A8009B060A /* Main.storyboard in Resources */,
+				0C0F33EA1D92D3900081E465 /* LaunchScreen.storyboard in Resources */,
+				0C0F33E71D92D3900081E465 /* Assets.xcassets in Resources */,
+				0C0F33E51D92D3900081E465 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FFA2031D92D3A9009B060A /* Resources */ = {
+		0C0F33EE1D92D3900081E465 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,49 +205,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		52FFA1ED1D92D3A8009B060A /* Sources */ = {
+		0C0F33D81D92D38F0081E465 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FFA2171D92F4FA009B060A /* ContactTableViewCell.swift in Sources */,
-				52FFA2151D92E954009B060A /* Contact.swift in Sources */,
-				52FFA2191D92FC4C009B060A /* ContactTableViewController.swift in Sources */,
-				52FFA1F71D92D3A8009B060A /* ViewController.swift in Sources */,
-				52FFA1F51D92D3A8009B060A /* AppDelegate.swift in Sources */,
+				0C0F34081D92F66E0081E465 /* Contact.swift in Sources */,
+				0C0F34061D92F5DC0081E465 /* ContactTableViewCell.swift in Sources */,
+				0C0F340A1D92FC510081E465 /* ContactTableViewController.swift in Sources */,
+				528AEB0A1D9ADFDD0042E5AA /* MainViewController.swift in Sources */,
+				0C0F33E21D92D3900081E465 /* ViewController.swift in Sources */,
+				0C0F33E01D92D3900081E465 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FFA2011D92D3A9009B060A /* Sources */ = {
+		0C0F33EC1D92D3900081E465 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FFA20A1D92D3A9009B060A /* DopunaTests.swift in Sources */,
+				0C0F33F51D92D3900081E465 /* DopunaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		52FFA2071D92D3A9009B060A /* PBXTargetDependency */ = {
+		0C0F33F21D92D3900081E465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52FFA1F01D92D3A8009B060A /* Dopuna */;
-			targetProxy = 52FFA2061D92D3A9009B060A /* PBXContainerItemProxy */;
+			target = 0C0F33DB1D92D38F0081E465 /* Dopuna */;
+			targetProxy = 0C0F33F11D92D3900081E465 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		52FFA1F81D92D3A8009B060A /* Main.storyboard */ = {
+		0C0F33E31D92D3900081E465 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				52FFA1F91D92D3A8009B060A /* Base */,
+				0C0F33E41D92D3900081E465 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		52FFA1FD1D92D3A8009B060A /* LaunchScreen.storyboard */ = {
+		0C0F33E81D92D3900081E465 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				52FFA1FE1D92D3A8009B060A /* Base */,
+				0C0F33E91D92D3900081E465 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -252,7 +256,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		52FFA20C1D92D3A9009B060A /* Debug */ = {
+		0C0F33F71D92D3900081E465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +301,7 @@
 			};
 			name = Debug;
 		};
-		52FFA20D1D92D3A9009B060A /* Release */ = {
+		0C0F33F81D92D3900081E465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -335,47 +339,47 @@
 			};
 			name = Release;
 		};
-		52FFA20F1D92D3A9009B060A /* Debug */ = {
+		0C0F33FA1D92D3900081E465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Dopuna/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Dopuna;
+				PRODUCT_BUNDLE_IDENTIFIER = meri.Dopuna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		52FFA2101D92D3A9009B060A /* Release */ = {
+		0C0F33FB1D92D3900081E465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Dopuna/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Dopuna;
+				PRODUCT_BUNDLE_IDENTIFIER = meri.Dopuna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		52FFA2121D92D3A9009B060A /* Debug */ = {
+		0C0F33FD1D92D3900081E465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DopunaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DopunaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = meri.DopunaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dopuna.app/Dopuna";
 			};
 			name = Debug;
 		};
-		52FFA2131D92D3A9009B060A /* Release */ = {
+		0C0F33FE1D92D3900081E465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DopunaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DopunaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = meri.DopunaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dopuna.app/Dopuna";
 			};
@@ -384,32 +388,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52FFA1EC1D92D3A7009B060A /* Build configuration list for PBXProject "Dopuna" */ = {
+		0C0F33D71D92D38F0081E465 /* Build configuration list for PBXProject "Dopuna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52FFA20C1D92D3A9009B060A /* Debug */,
-				52FFA20D1D92D3A9009B060A /* Release */,
+				0C0F33F71D92D3900081E465 /* Debug */,
+				0C0F33F81D92D3900081E465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52FFA20E1D92D3A9009B060A /* Build configuration list for PBXNativeTarget "Dopuna" */ = {
+		0C0F33F91D92D3900081E465 /* Build configuration list for PBXNativeTarget "Dopuna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52FFA20F1D92D3A9009B060A /* Debug */,
-				52FFA2101D92D3A9009B060A /* Release */,
+				0C0F33FA1D92D3900081E465 /* Debug */,
+				0C0F33FB1D92D3900081E465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		52FFA2111D92D3A9009B060A /* Build configuration list for PBXNativeTarget "DopunaTests" */ = {
+		0C0F33FC1D92D3900081E465 /* Build configuration list for PBXNativeTarget "DopunaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52FFA2121D92D3A9009B060A /* Debug */,
-				52FFA2131D92D3A9009B060A /* Release */,
+				0C0F33FD1D92D3900081E465 /* Debug */,
+				0C0F33FE1D92D3900081E465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 52FFA1E91D92D3A7009B060A /* Project object */;
+	rootObject = 0C0F33D41D92D38F0081E465 /* Project object */;
 }

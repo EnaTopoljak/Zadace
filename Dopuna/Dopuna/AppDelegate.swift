@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Dopuna
 //
-//  Created by Test on 21.09.2016..
-//  Copyright © 2016. ena. All rights reserved.
+//  Created by Merima on 9/21/16.
+//  Copyright © 2016 Merima & Ena. All rights reserved.
 //
 
 import UIKit

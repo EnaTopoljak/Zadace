@@ -1,66 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hEZ-Tg-7yg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AaR-Jc-Yu2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--KORISNICI-->
-        <scene sceneID="UoT-0u-dwz">
+        <!--KONTAKTI-->
+        <scene sceneID="xRG-IO-C9z">
             <objects>
-                <tableViewController id="zWg-4h-4vF" customClass="ContactTableViewController" customModule="Dopuna" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="92o-dq-qWq">
+                <tableViewController id="FZY-he-m8r" customClass="ContactTableViewController" customModule="Dopuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="6cE-W2-om0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="fNA-Pu-dJa" detailTextLabel="LZZ-1r-zL6" rowHeight="90" style="IBUITableViewCellStyleSubtitle" id="NuN-vI-N0n" customClass="ContactTableViewCell" customModule="Dopuna" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="30" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="cNH-lk-zeO" detailTextLabel="2DO-PG-xqZ" rowHeight="30" style="IBUITableViewCellStyleSubtitle" id="VFM-LS-nD9" customClass="ContactTableViewCell" customModule="Dopuna" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NuN-vI-N0n" id="mfp-Iy-vkA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VFM-LS-nD9" id="4Pw-eP-9N6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fNA-Pu-dJa">
-                                            <rect key="frame" x="15" y="28" width="32" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cNH-lk-zeO">
+                                            <rect key="frame" x="15" y="-2" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LZZ-1r-zL6">
-                                            <rect key="frame" x="15" y="48" width="41" height="14"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2DO-PG-xqZ">
+                                            <rect key="frame" x="15" y="18" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="ContactTableViewCell"/>
                                 <connections>
-                                    <outlet property="nameLabel" destination="fNA-Pu-dJa" id="dXd-Qf-c1s"/>
-                                    <outlet property="numberLabel" destination="LZZ-1r-zL6" id="QV5-M8-EFd"/>
+                                    <outlet property="contactNameLabel" destination="cNH-lk-zeO" id="AkV-Kh-bPS"/>
+                                    <outlet property="contactNumberLabel" destination="2DO-PG-xqZ" id="1hk-gr-i4V"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="zWg-4h-4vF" id="g0X-iq-VCw"/>
-                            <outlet property="delegate" destination="zWg-4h-4vF" id="7O4-Wv-WX4"/>
+                            <outlet property="dataSource" destination="FZY-he-m8r" id="LIu-hF-F1V"/>
+                            <outlet property="delegate" destination="FZY-he-m8r" id="HGd-Oh-e6U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="KORISNICI" id="hiB-49-S8G">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0IO-jl-nSl">
-                            <connections>
-                                <segue destination="s3W-nM-2vx" kind="show" identifier="AddItem" action="showDetailViewController:sender:" id="aUQ-MD-vhJ"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="KONTAKTI" id="Fst-zP-V97">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="sDg-lD-mQp">
+                                <connections>
+                                    <segue destination="2fD-2r-ZU5" kind="show" identifier="AddItem" id="2FX-Bj-aEa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="bba-rR-tR6">
+                                <connections>
+                                    <action selector="editContact:" destination="FZY-he-m8r" id="eko-BB-3Me"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editContactButton" destination="bba-rR-tR6" id="cii-v0-oGY"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dq0-Fh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoY-6P-s1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="350"/>
+            <point key="canvasLocation" x="1623" y="277"/>
         </scene>
         <!--DODAJ NOVI KONTAKT-->
         <scene sceneID="tne-QT-ifu">
@@ -74,111 +84,211 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-3H-mxj">
-                                <rect key="frame" x="28" y="133" width="20" height="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phoneImage" translatesAutoresizingMaskIntoConstraints="NO" id="hb1-RE-Whp">
+                                <rect key="frame" x="20" y="151" width="20" height="20"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ime i prezime (opciono)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84A-3K-xRv">
-                                <rect key="frame" x="56" y="128" width="524" height="30"/>
-                                <color key="tintColor" red="0.32549019610000002" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Number" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-6H-WzS">
-                                <rect key="frame" x="28" y="182" width="20" height="20"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+387" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz7-pj-c2T">
-                                <rect key="frame" x="56" y="177" width="49" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 387" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-fi-pMk">
+                                <rect key="frame" x="48" y="151" width="52" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.12941176470588234" green="0.50588235294117645" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.85882352941176465" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Broj telefona" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDZ-Ap-1og">
-                                <rect key="frame" x="118" y="177" width="462" height="30"/>
-                                <color key="tintColor" red="0.32549019607843138" green="0.85882352941176465" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contactImage" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-Ht-71R">
+                                <rect key="frame" x="20" y="93" width="20" height="20"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ime i prezime (opciono)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-DJ-gXg">
+                                <rect key="frame" x="61" y="88" width="519" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B33-9k-gZt">
-                                <rect key="frame" x="20" y="281" width="560" height="37"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Broj telefona" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLa-zO-rKQ">
+                                <rect key="frame" x="115" y="142" width="465" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gik-ZC-98C">
+                                <rect key="frame" x="20" y="209" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.32549019607843138" green="0.85882352941176465" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="DODAJ NOVI RAČUN">
-                                    <color key="titleColor" red="0.99686781309350891" green="0.99660821234290986" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Iiy-VL-zV0" kind="unwind" unwindAction="unwindContactList:" id="5pz-Ta-esv"/>
+                                    <action selector="addNewContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTE-FV-LH7"/>
+                                    <segue destination="5sm-Im-gsd" kind="unwind" identifier="" unwindAction="unwindToContactList:" id="E4j-OY-dQt"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.32549019607843138" green="0.85882352941176465" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="B33-9k-gZt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="5N9-79-8b6"/>
-                            <constraint firstItem="eDZ-Ap-1og" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="88E-IE-pnX"/>
-                            <constraint firstItem="84A-3K-xRv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="sAy-GI-8X7"/>
+                            <constraint firstItem="Qrh-DJ-gXg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="7ID-7Z-0Lx"/>
+                            <constraint firstItem="LLa-zO-rKQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="Ms8-Ty-daL"/>
+                            <constraint firstItem="gik-ZC-98C" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="R0W-gC-atV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DODAJ NOVI KONTAKT" id="mhJ-uI-Wsg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ovb-kF-QR6">
+                    <navigationItem key="navigationItem" title="DODAJ NOVI KONTAKT" id="Dth-IZ-m7A">
+                        <barButtonItem key="leftBarButtonItem" tag="2" title="&lt;" id="fmi-Jc-2Eg">
                             <connections>
-                                <segue destination="Iiy-VL-zV0" kind="unwind" unwindAction="unwindContactList:" id="UUd-b9-jvB"/>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="ZcB-X8-IaQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0yE-vv-Iot">
+                            <connections>
+                                <action selector="addNewContactBarButton:" destination="BYZ-38-t0r" id="4sr-A1-tM4"/>
+                                <segue destination="5sm-Im-gsd" kind="unwind" unwindAction="unwindToContactList:" id="slV-Ju-KmR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addNewContact" destination="Ovb-kF-QR6" id="h7w-Ig-Fhr"/>
-                        <outlet property="addNewContactButton" destination="B33-9k-gZt" id="FKi-Y6-igw"/>
-                        <outlet property="contactImage" destination="L4p-3H-mxj" id="EBK-in-TNW"/>
-                        <outlet property="contactName" destination="84A-3K-xRv" id="HxG-qo-Kk9"/>
-                        <outlet property="contactNumber" destination="eDZ-Ap-1og" id="b3K-tM-cgh"/>
-                        <outlet property="numberImage" destination="dIM-6H-WzS" id="5gn-hH-HPZ"/>
-                        <outlet property="stateNumber" destination="Kz7-pj-c2T" id="w9A-V3-sKZ"/>
+                        <outlet property="addNewContactBarButton" destination="0yE-vv-Iot" id="hMV-m4-iF2"/>
+                        <outlet property="contactImage" destination="pO0-Ht-71R" id="EGe-mI-LzH"/>
+                        <outlet property="contactName" destination="Qrh-DJ-gXg" id="XBO-HB-Mnd"/>
+                        <outlet property="contactNumber" destination="LLa-zO-rKQ" id="M6I-yO-lXi"/>
+                        <outlet property="dodajNoviRacun" destination="gik-ZC-98C" id="HGP-kj-CsA"/>
+                        <outlet property="numberImage" destination="hb1-RE-Whp" id="hsi-r2-jYP"/>
+                        <outlet property="stateNumber" destination="dqd-fi-pMk" id="A5P-uM-egQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="Iiy-VL-zV0" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="5sm-Im-gsd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4040" y="350"/>
+            <point key="canvasLocation" x="3062" y="277"/>
+        </scene>
+        <!--DOPUNA BiH-->
+        <scene sceneID="BtS-8t-2OG">
+            <objects>
+                <viewController id="XWI-hr-4O7" customClass="MainViewController" customModule="Dopuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2R5-Qo-Oer"/>
+                        <viewControllerLayoutGuide type="bottom" id="DBZ-vP-RAn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R5p-pi-OVX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tMW-hP-XIp">
+                                <rect key="frame" x="20" y="195" width="560" height="29"/>
+                                <segments>
+                                    <segment title="m:tel"/>
+                                    <segment title="BH Telecom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="odaberiMrezu:" destination="XWI-hr-4O7" eventType="valueChanged" id="Jra-IJ-f2o"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-ez-Hcg">
+                                <rect key="frame" x="20" y="264" width="560" height="29"/>
+                                <segments>
+                                    <segment title="2KM"/>
+                                    <segment title="3KM"/>
+                                    <segment title="4KM"/>
+                                    <segment title="5KM"/>
+                                    <segment title="10KM"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-yz-PPB">
+                                <rect key="frame" x="20" y="343" width="560" height="30"/>
+                                <state key="normal" title="DOPUNI RAČUN"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-yJ-Kqi">
+                                <rect key="frame" x="20" y="125" width="560" height="30"/>
+                                <state key="normal" title="DODAJ KONTAKT"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tMW-hP-XIp" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="1G7-TU-ZAg"/>
+                            <constraint firstItem="O4l-yJ-Kqi" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="P32-r1-4s4"/>
+                            <constraint firstItem="Nfq-ez-Hcg" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="f0x-gx-zBU"/>
+                            <constraint firstItem="cuu-yz-PPB" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="nBG-xJ-TSP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DOPUNA BiH" id="tdD-Ah-prd"/>
+                    <connections>
+                        <outlet property="dopuni" destination="cuu-yz-PPB" id="i60-ez-M6p"/>
+                        <outlet property="insertContact" destination="O4l-yJ-Kqi" id="kyl-5x-RZd"/>
+                        <outlet property="iznos" destination="Nfq-ez-Hcg" id="B0j-y8-XGc"/>
+                        <outlet property="mreza" destination="tMW-hP-XIp" id="GMB-GB-btg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mp-73-FhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="277"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="YDM-ky-UVT">
+        <scene sceneID="7oD-Qz-y4D">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hEZ-Tg-7yg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="udz-nh-RQA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n4y-EN-3SE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tug-aa-11t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zWg-4h-4vF" kind="relationship" relationship="rootViewController" id="vEY-SD-xX9"/>
+                        <segue destination="FZY-he-m8r" kind="relationship" relationship="rootViewController" id="ZC8-2d-uiy"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3mi-KJ-tHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umn-DZ-Khu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792" y="350"/>
+            <point key="canvasLocation" x="831" y="277"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tG8-F9-o4K">
+        <scene sceneID="Y5c-68-zra">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s3W-nM-2vx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fD-2r-ZU5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybo-ma-kQA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIN-Xt-nUy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d7b-bK-i5y"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p5k-2z-lQi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qSW-oo-I3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfK-sN-QPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408" y="344"/>
+            <point key="canvasLocation" x="2375" y="277"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="blY-H4-Cco">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AaR-Jc-Yu2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IPd-wH-9gW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XWI-hr-4O7" kind="relationship" relationship="rootViewController" id="QAJ-3V-lW7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTo-vb-mcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="277"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Contact" width="22" height="22"/>
-        <image name="Number" width="22" height="22"/>
+        <image name="contactImage" width="22" height="22"/>
+        <image name="phoneImage" width="22" height="22"/>
     </resources>
-    <color key="tintColor" red="0.32549019610000002" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
