@@ -42,6 +42,7 @@
                                 <connections>
                                     <outlet property="contactNameLabel" destination="cNH-lk-zeO" id="AkV-Kh-bPS"/>
                                     <outlet property="contactNumberLabel" destination="2DO-PG-xqZ" id="1hk-gr-i4V"/>
+                                    <segue destination="b1q-L9-7Lo" kind="unwind" unwindAction="unwindToMainController:" id="6Ym-Qx-APq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,13 +52,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="KONTAKTI" id="Fst-zP-V97">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ciR-Kn-LPT"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="sDg-lD-mQp">
+                                <color key="tintColor" red="0.99686781310000006" green="0.99660821229999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="2fD-2r-ZU5" kind="show" identifier="AddItem" id="2FX-Bj-aEa"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="aEd-SE-lTE"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="bba-rR-tR6">
+                                <color key="tintColor" red="0.99686781310000006" green="0.99660821229999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="editContact:" destination="FZY-he-m8r" id="eko-BB-3Me"/>
                                 </connections>
@@ -69,8 +73,9 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoY-6P-s1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b1q-L9-7Lo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1623" y="277"/>
+            <point key="canvasLocation" x="451" y="269"/>
         </scene>
         <!--DODAJ NOVI KONTAKT-->
         <scene sceneID="tne-QT-ifu">
@@ -144,12 +149,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DODAJ NOVI KONTAKT" id="Dth-IZ-m7A">
-                        <barButtonItem key="leftBarButtonItem" tag="2" title="&lt;" id="fmi-Jc-2Eg">
-                            <connections>
-                                <action selector="cancel:" destination="BYZ-38-t0r" id="ZcB-X8-IaQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="dGW-VW-9mp"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0yE-vv-Iot">
+                            <color key="tintColor" red="0.99686781310000006" green="0.99660821229999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addNewContactBarButton:" destination="BYZ-38-t0r" id="4sr-A1-tM4"/>
                                 <segue destination="5sm-Im-gsd" kind="unwind" unwindAction="unwindToContactList:" id="slV-Ju-KmR"/>
@@ -169,7 +171,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="5sm-Im-gsd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3062" y="277"/>
+            <point key="canvasLocation" x="1268" y="269"/>
         </scene>
         <!--DOPUNA BiH-->
         <scene sceneID="BtS-8t-2OG">
@@ -183,8 +185,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-yJ-Kqi">
+                                <rect key="frame" x="20" y="119" width="560" height="41"/>
+                                <state key="normal" title="DODAJ KONTAKT"/>
+                                <connections>
+                                    <segue destination="FZY-he-m8r" kind="show" id="Uff-Zt-RG0"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tMW-hP-XIp">
-                                <rect key="frame" x="20" y="195" width="560" height="29"/>
+                                <rect key="frame" x="20" y="185" width="560" height="29"/>
                                 <segments>
                                     <segment title="m:tel"/>
                                     <segment title="BH Telecom"/>
@@ -194,22 +203,21 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-ez-Hcg">
-                                <rect key="frame" x="20" y="264" width="560" height="29"/>
+                                <rect key="frame" x="20" y="241" width="560" height="29"/>
                                 <segments>
-                                    <segment title="2KM"/>
-                                    <segment title="3KM"/>
-                                    <segment title="4KM"/>
-                                    <segment title="5KM"/>
-                                    <segment title="10KM"/>
+                                    <segment title="2 KM"/>
+                                    <segment title="3 KM"/>
+                                    <segment title="4 KM"/>
+                                    <segment title="5 KM"/>
+                                    <segment title="10 KM"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-yz-PPB">
-                                <rect key="frame" x="20" y="343" width="560" height="30"/>
+                                <rect key="frame" x="20" y="301" width="560" height="43"/>
                                 <state key="normal" title="DOPUNI RAČUN"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-yJ-Kqi">
-                                <rect key="frame" x="20" y="125" width="560" height="30"/>
-                                <state key="normal" title="DODAJ KONTAKT"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="XWI-hr-4O7" eventType="touchUpInside" id="plF-tv-aDp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -220,7 +228,11 @@
                             <constraint firstItem="cuu-yz-PPB" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="nBG-xJ-TSP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DOPUNA BiH" id="tdD-Ah-prd"/>
+                    <navigationItem key="navigationItem" title="DOPUNA BiH" id="tdD-Ah-prd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xNN-OC-kKJ" userLabel="\">
+                            <color key="tintColor" red="0.99686781310000006" green="0.99660821229999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dopuni" destination="cuu-yz-PPB" id="i60-ez-M6p"/>
                         <outlet property="insertContact" destination="O4l-yJ-Kqi" id="kyl-5x-RZd"/>
@@ -230,43 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mp-73-FhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="277"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7oD-Qz-y4D">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="udz-nh-RQA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tug-aa-11t">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FZY-he-m8r" kind="relationship" relationship="rootViewController" id="ZC8-2d-uiy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="umn-DZ-Khu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="831" y="277"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Y5c-68-zra">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fD-2r-ZU5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIN-Xt-nUy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p5k-2z-lQi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfK-sN-QPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2375" y="277"/>
+            <point key="canvasLocation" x="-289" y="277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="blY-H4-Cco">
@@ -276,6 +252,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IPd-wH-9gW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32549019610000002" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99686781310000006" green="0.99660821229999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -284,11 +264,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTo-vb-mcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-709" y="277"/>
+            <point key="canvasLocation" x="-1033" y="277"/>
         </scene>
     </scenes>
     <resources>
         <image name="contactImage" width="22" height="22"/>
         <image name="phoneImage" width="22" height="22"/>
     </resources>
+    <color key="tintColor" red="0.32549019610000002" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

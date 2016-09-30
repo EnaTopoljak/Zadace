@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol ContactTableViewDelegate {
+    func didPressCellWithTitle (contact: Contact)
+}
+
 class ContactTableViewController: UITableViewController {
     // MARK: Properties
+    
+    var delegate: ContactTableViewDelegate?
     var contacts = [Contact]()
     var selectedContact: Contact? {
         didSet {
@@ -20,6 +26,7 @@ class ContactTableViewController: UITableViewController {
     }
     var selectedContactIndex: Int?
 
+    @IBOutlet weak var selectedContactCell: ContactTableViewCell!
     @IBOutlet weak var editContactButton: UIBarButtonItem!
    /* @IBOutlet weak var editContactButton: UIBarButtonItem! */
 
@@ -60,9 +67,9 @@ class ContactTableViewController: UITableViewController {
         cell.contactNumberLabel.text = "+387" + contact.phoneNumber
         
         if cell.contactNameLabel.text == "" {
-            cell.contactNameLabel.text = contact.phoneNumber
+            cell.contactNameLabel.text = cell.contactNumberLabel.text
             cell.contactNumberLabel.text = ""
-        }
+            }
         
         cell.contactNumberLabel.textColor = UIColor.grayColor()
         cell.contactNameLabel.textColor = UIColor(red:33/255, green: 129/255, blue: 112/255, alpha: 1)
@@ -79,22 +86,25 @@ class ContactTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-            if let index = selectedContactIndex {
-                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
-                cell?.accessoryType = .None
-            }
-            
-            selectedContact = contacts[indexPath.row]
-            
-            
-            let cell = tableView.cellForRowAtIndexPath(indexPath)
-            cell?.accessoryType = .Checkmark
+        if let index = selectedContactIndex {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
+            cell?.accessoryType = .None
+        }
+        
+        selectedContact = contacts[indexPath.row]
+        
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.accessoryType = .Checkmark
+        //  Ovdje prosliijedi kontakt
+        delegate?.didPressCellWithTitle((selectedContact)!)
+        
+        _ = self.navigationController?.popViewControllerAnimated(true)
         
         
     }
-
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -143,12 +153,12 @@ class ContactTableViewController: UITableViewController {
             if let selectedContactCell = sender as? ContactTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedContactCell)!
                 let selectedContact = contacts[indexPath.row]
-                contactDetailViewController.contact = selectedContact           }        }
-        else if segue.identifier == "AddItem" {
-        }    }
+                contactDetailViewController.contact = selectedContact
+            }
+        }
+    }
  // MARK: Action
     
-
     
     @IBAction func editContact(sender: UIBarButtonItem) {
         if (self.tableView.editing) {
