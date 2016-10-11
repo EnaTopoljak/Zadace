@@ -18,8 +18,9 @@ class User: NSObject {
     var phone: String?
     var website: String?
     var company: Company?
+    var posts: Posts?
     
-    init(id: Int, name: String, username: String, email: String, address: Address, phone: String, website: String, company: Company) {
+    init(id: Int, name: String, username: String, email: String, address: Address, phone: String, website: String, company: Company, posts: Posts) {
         self.id = id
         self.name = name
         self.username = username
@@ -28,6 +29,7 @@ class User: NSObject {
         self.phone = phone
         self.website = website
         self.company = company
+        self.posts = posts
        
         
     }

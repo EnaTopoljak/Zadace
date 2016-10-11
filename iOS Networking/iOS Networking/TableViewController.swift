@@ -9,13 +9,15 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    var posts = [Posts]()
+    var userIdForPosts : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        sendRequestForPosts()
 
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,18 +34,21 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let post = self.posts[indexPath.row]
+        cell.textLabel?.text = post.title
+        cell.detailTextLabel?.text = post.body
+        
         return cell
+       
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,5 +94,54 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func sendRequestForPosts() {
+        let url = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=\(userIdForPosts)")!
+        
+        URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String: AnyObject]]
+                    
+                    self.posts = [Posts]()
+                    
+                    for postObject in json {
+                        
+                        let post = Posts()
+                        
+                        if let userId = postObject["UserId"] as? Int {
+                            post.userId = userId
+                        }
+                        
+                        if let id = postObject["id"] as? Int {
+                            post.id = id
+                        }
+                        if let title = postObject["title"] as? String {
+                            post.title = title
+                        }
+                        
+                        if let body = postObject["body"] as? String {
+                            post.body = body
+                            
+                        }
+                        self.posts.append(post)
+                        
+                    }
+                    DispatchQueue.main.sync {
+                        self.tableView.reloadData()
+                    }
+                    
+                } catch {
+                    print(error)
+                }
+            }
+            
+            }.resume()
+        
+    }
+    
 
 }

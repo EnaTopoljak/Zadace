@@ -23,21 +23,21 @@ class Contact: NSObject, NSCoding {
         }
     }
     
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("contacts")
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("contacts")
     
     struct PropertyKey {
         static let nameKey = "name"
         static let numberKey = "phoneNumber"
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
-        aCoder.encodeObject(phoneNumber, forKey: PropertyKey.numberKey)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: PropertyKey.nameKey)
+        aCoder.encode(phoneNumber, forKey: PropertyKey.numberKey)
     }
     required convenience init? (coder aDecoder: NSCoder) {
-        let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String?
-        let phoneNumber = aDecoder.decodeObjectForKey(PropertyKey.numberKey) as! String
+        let name = aDecoder.decodeObject(forKey: PropertyKey.nameKey) as! String?
+        let phoneNumber = aDecoder.decodeObject(forKey: PropertyKey.numberKey) as! String
         
         self.init (name: name, phoneNumber: phoneNumber)
     }

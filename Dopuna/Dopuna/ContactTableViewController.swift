@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ContactTableViewDelegate {
-    func didPressCellWithTitle (contact: Contact)
+    func didPressCellWithTitle (_ contact: Contact)
 }
 
 class ContactTableViewController: UITableViewController {
@@ -20,7 +20,7 @@ class ContactTableViewController: UITableViewController {
     var selectedContact: Contact? {
         didSet {
             if let contact = selectedContact {
-                selectedContactIndex = contacts.indexOf(contact)!
+                selectedContactIndex = contacts.index(of: contact)!
             }
         }
     }
@@ -46,22 +46,22 @@ class ContactTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return contacts.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ContactTableViewCell
-        let contact = contacts[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactTableViewCell
+        let contact = contacts[(indexPath as NSIndexPath).row]
        
         cell.contactNameLabel.text = contact.name
         cell.contactNumberLabel.text = "+387" + contact.phoneNumber
@@ -71,43 +71,43 @@ class ContactTableViewController: UITableViewController {
             cell.contactNumberLabel.text = ""
             }
         
-        cell.contactNumberLabel.textColor = UIColor.grayColor()
+        cell.contactNumberLabel.textColor = UIColor.gray
         cell.contactNameLabel.textColor = UIColor(red:33/255, green: 129/255, blue: 112/255, alpha: 1)
        
         
-        if indexPath.row == selectedContactIndex {
-            cell.accessoryType = .Checkmark
+        if (indexPath as NSIndexPath).row == selectedContactIndex {
+            cell.accessoryType = .checkmark
         } else {
-            cell.accessoryType = .None
+            cell.accessoryType = .none
         }
         
         return cell
       
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         if let index = selectedContactIndex {
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
-            cell?.accessoryType = .None
+            let cell = tableView.cellForRow(at: IndexPath(row: index, section: 0))
+            cell?.accessoryType = .none
         }
         
-        selectedContact = contacts[indexPath.row]
+        selectedContact = contacts[(indexPath as NSIndexPath).row]
         
         
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.accessoryType = .Checkmark
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
         //  Ovdje prosliijedi kontakt
         delegate?.didPressCellWithTitle((selectedContact)!)
         
-        _ = self.navigationController?.popViewControllerAnimated(true)
+        _ = self.navigationController?.popViewController(animated: true)
         
         
     }
     
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -115,13 +115,13 @@ class ContactTableViewController: UITableViewController {
 
 
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
-            contacts.removeAtIndex(indexPath.row)
+            contacts.remove(at: (indexPath as NSIndexPath).row)
             saveContacts()
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
@@ -146,13 +146,13 @@ class ContactTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
-            let contactDetailViewController = segue.destinationViewController as! ViewController
+            let contactDetailViewController = segue.destination as! ViewController
             // Get the cell that generated this segue.
             if let selectedContactCell = sender as? ContactTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedContactCell)!
-                let selectedContact = contacts[indexPath.row]
+                let indexPath = tableView.indexPath(for: selectedContactCell)!
+                let selectedContact = contacts[(indexPath as NSIndexPath).row]
                 contactDetailViewController.contact = selectedContact
             }
         }
@@ -160,8 +160,8 @@ class ContactTableViewController: UITableViewController {
  // MARK: Action
     
     
-    @IBAction func editContact(sender: UIBarButtonItem) {
-        if (self.tableView.editing) {
+    @IBAction func editContact(_ sender: UIBarButtonItem) {
+        if (self.tableView.isEditing) {
             editContactButton.title = "Trash"
             self.tableView.setEditing(false, animated: true)
         } else {
@@ -170,18 +170,18 @@ class ContactTableViewController: UITableViewController {
         }    }
   
     
-    @IBAction func unwindToContactList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? ViewController, contact = sourceViewController.contact {
+    @IBAction func unwindToContactList(_ sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ViewController, let contact = sourceViewController.contact {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing contact.
-                contacts[selectedIndexPath.row] = contact
-                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                contacts[(selectedIndexPath as NSIndexPath).row] = contact
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else {
                 // Add a new contact.
-                let newIndexPath = NSIndexPath(forRow: contacts.count, inSection: 0)
+                let newIndexPath = IndexPath(row: contacts.count, section: 0)
                 contacts.append(contact)
-                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+                tableView.insertRows(at: [newIndexPath], with: .bottom)
                 
             }
             saveContacts()
@@ -189,13 +189,13 @@ class ContactTableViewController: UITableViewController {
     }
     func saveContacts () {
         
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(contacts, toFile: Contact.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(contacts, toFile: Contact.ArchiveURL.path)
         if !isSuccessfulSave {
             print("Failed to save contacts...")
         }
     }
     
     func loadContacts() -> [Contact]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Contact.ArchiveURL.path!) as? [Contact]
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Contact.ArchiveURL.path) as? [Contact]
     }
 }

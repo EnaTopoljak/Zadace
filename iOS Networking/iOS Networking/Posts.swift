@@ -10,11 +10,14 @@ import UIKit
 
 class Posts: NSObject {
 
-    var id: String?
+    var userId: Int?
+    var id: Int?
     var title: String?
     var body: String?
     
-    init(id: String, title: String, body: String) {
+    init(userId: Int, id: Int, title: String, body: String) {
+        
+        self.userId = userId
         self.id = id
         self.title = title
         self.body = body

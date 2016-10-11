@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol SelectedUserTableViewDelegate {
+    func didPressCellWithUser(user: User)
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var users = [User]()
     var posts = [Posts]()
+    var selectedUser: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     for userObject in json {
                         
-                    var user = User()
+                    let user = User()
                     
                     if let id = userObject["id"] as? Int {
                     user.id = id
@@ -140,44 +145,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       /* let url = URL (string: "https://jsonplaceholder.typicode.com/users/1/posts")!
-        
-        URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
-
-                        
-                        let user = User ()
-                        let posts = Posts ()
-                    
-                        user.posts = posts
-                    
-                    
-                            if let title = json["title"] as? String {
-                                posts.title = title
-                            }
-                            if let body = json["posts"] as? String {
-                                posts.body = body
-                            }
-                        
-                        self.users.append(user)
-                    
-                    DispatchQueue.main.sync {
-                    self.tableView.reloadData()
-                    }
-                    
-                }
-                catch {
-                    print(error)
-                }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowUserPosts"){
+            var postsForUser = segue.destination as! TableViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let selectedUser = users[(indexPath?.row)!]
+            postsForUser.userIdForPosts = selectedUser.id!
+        }
     }
-}.resume() */
-}
+
 }
 

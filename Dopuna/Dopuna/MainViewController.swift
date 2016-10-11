@@ -16,20 +16,20 @@ class MainViewController: UIViewController, MFMessageComposeViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        insertContact.layer.borderColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1).CGColor
+        insertContact.layer.borderColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1).cgColor
         insertContact.layer.borderWidth = CGFloat(1.0)
         insertContact.layer.cornerRadius = 6
-        insertContact.titleLabel?.textAlignment = NSTextAlignment.Center
+        insertContact.titleLabel?.textAlignment = NSTextAlignment.center
         
-        mreza.layer.borderColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1).CGColor
+        mreza.layer.borderColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1).cgColor
         mreza.layer.borderWidth = CGFloat(1.0)
         mreza.layer.cornerRadius = 8
         
-        iznos.layer.borderColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1).CGColor
+        iznos.layer.borderColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1).cgColor
         iznos.layer.borderWidth = CGFloat(1.0)
         iznos.layer.cornerRadius = 8
         
-        dopuni.layer.borderColor = UIColor(red: 83/255, green: 219/255, blue: 207/255, alpha: 1).CGColor
+        dopuni.layer.borderColor = UIColor(red: 83/255, green: 219/255, blue: 207/255, alpha: 1).cgColor
         dopuni.layer.borderWidth = CGFloat(1.0)
         dopuni.layer.cornerRadius = 6
         
@@ -64,27 +64,27 @@ class MainViewController: UIViewController, MFMessageComposeViewControllerDelega
     // Actions
     
    
-    @IBAction func odaberiMrezu(sender: UISegmentedControl) {
+    @IBAction func odaberiMrezu(_ sender: UISegmentedControl) {
         if mreza.selectedSegmentIndex == 0 {
           
-            iznos.setTitle("2 KM", forSegmentAtIndex: 0)
-            iznos.setTitle("3 KM", forSegmentAtIndex: 1)
-            iznos.setTitle("4 KM", forSegmentAtIndex: 2)
-            iznos.setTitle("5 KM", forSegmentAtIndex: 3)
-            iznos.setTitle("10 KM", forSegmentAtIndex: 4)
+            iznos.setTitle("2 KM", forSegmentAt: 0)
+            iznos.setTitle("3 KM", forSegmentAt: 1)
+            iznos.setTitle("4 KM", forSegmentAt: 2)
+            iznos.setTitle("5 KM", forSegmentAt: 3)
+            iznos.setTitle("10 KM", forSegmentAt: 4)
             
         }
         if mreza.selectedSegmentIndex == 1 {
-            iznos.setTitle("1 KM", forSegmentAtIndex: 0)
-            iznos.setTitle("2 KM", forSegmentAtIndex: 1)
-            iznos.setTitle("5 KM", forSegmentAtIndex: 2)
-            iznos.setTitle("10 KM", forSegmentAtIndex: 3)
-            iznos.setTitle("20 KM", forSegmentAtIndex: 4)
+            iznos.setTitle("1 KM", forSegmentAt: 0)
+            iznos.setTitle("2 KM", forSegmentAt: 1)
+            iznos.setTitle("5 KM", forSegmentAt: 2)
+            iznos.setTitle("10 KM", forSegmentAt: 3)
+            iznos.setTitle("20 KM", forSegmentAt: 4)
         }
     }
     
     
-    func didPressCellWithTitle(contact: Contact) {
+    func didPressCellWithTitle(_ contact: Contact) {
         if contact.name == "" {
             insertContact.titleLabel?.text = "+387" + contact.phoneNumber
         } else {
@@ -93,27 +93,27 @@ class MainViewController: UIViewController, MFMessageComposeViewControllerDelega
         selectedPhoneNumber = contact.phoneNumber
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let contactTableViewController = segue.destinationViewController as? ContactTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let contactTableViewController = segue.destination as? ContactTableViewController {
            contactTableViewController.delegate = self
         }
     }
     
-    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func sendMessage(sender: UIButton) {
+    @IBAction func sendMessage(_ sender: UIButton) {
         if !MFMessageComposeViewController.canSendText() {
-            let alertController = UIAlertController(title: "Pažnja", message: "Ovaj uređaj ne može poslati poruku.", preferredStyle: .Alert)
-            let OKAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            let alertController = UIAlertController(title: "Pažnja", message: "Ovaj uređaj ne može poslati poruku.", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertController.addAction(OKAction)
-            self.presentViewController(alertController, animated: true, completion:nil)
+            self.present(alertController, animated: true, completion:nil)
             } else {
             let composeVC = MFMessageComposeViewController()
             composeVC.delegate = self
             
-            var iznosSplitted = iznos.titleForSegmentAtIndex(iznos.selectedSegmentIndex)?.componentsSeparatedByString(" ")
+            var iznosSplitted = iznos.titleForSegment(at: iznos.selectedSegmentIndex)?.components(separatedBy: " ")
            let odabraniIznos = iznosSplitted! [0]
 
             if mreza.selectedSegmentIndex == 0 {
@@ -125,7 +125,7 @@ class MainViewController: UIViewController, MFMessageComposeViewControllerDelega
                 composeVC.body = odabraniIznos + " 387" + selectedPhoneNumber
             }
             
-            self.presentViewController(composeVC, animated: true, completion: nil)
+            self.present(composeVC, animated: true, completion: nil)
         }
     }
     
