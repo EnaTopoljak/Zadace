@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var users = [User]()
-    var selectedUser = User()
+    var user = User()
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        mapView.delegate = self
     }
     
     
@@ -117,6 +118,7 @@ class ViewController: UIViewController {
                             
                             
                         }
+                        Users.shared.users.append(user)
                         self.users.append(user)
                         
                     }
@@ -153,7 +155,7 @@ class ViewController: UIViewController {
             let annonation = MKPointAnnotation()
             let coordinate = CLLocationCoordinate2DMake(Double((user.address?.geo?.lat)!)!, Double((user.address?.geo?.lng)!)!)
             annonation.title = user.name
-            annonation.subtitle = (user.address?.street)! + (user.address?.city)!
+            annonation.subtitle = (user.address?.street)! + ", " + (user.address?.city)!
             annonation.coordinate = coordinate
             mapView.addAnnotation(annonation)
         }
@@ -172,11 +174,17 @@ class ViewController: UIViewController {
         let userRegion = MKCoordinateRegionMake(coordinate, span)
         mapView.setRegion(userRegion, animated: true)
     }
-
+    func displayUser () {
+        let userName = user.name
+        print(userName)
+    }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "UserController", sender: self)
+        
+    }
 }
 
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, MKMapViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -195,8 +203,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocation
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedUser = users[indexPath.row]
-        showUsersLocation(user: selectedUser)
+        user = users[indexPath.row]
+        showUsersLocation(user: user)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -215,6 +223,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocation
 
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "User"
+        let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:identifier)
+        annotationView.isEnabled = true
+        annotationView.canShowCallout = true
+                
+        let button = UIButton(type: .detailDisclosure)
+        annotationView.rightCalloutAccessoryView = button
+        button.addTarget(self, action: #selector(ViewController.displayUser), for: UIControlEvents.touchUpInside)
+
+        return annotationView
+        
+    }
 }
 
 
