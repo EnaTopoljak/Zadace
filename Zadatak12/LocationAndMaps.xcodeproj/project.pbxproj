@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52B9D5B61DC0F9CD007A0CF1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D5B51DC0F9CD007A0CF1 /* UserViewController.swift */; };
-		52B9D5B81DC13A8A007A0CF1 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D5B71DC13A8A007A0CF1 /* Users.swift */; };
 		52C997B21DB52DF400315811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C997B11DB52DF400315811 /* AppDelegate.swift */; };
 		52C997B41DB52DF400315811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C997B31DB52DF400315811 /* ViewController.swift */; };
 		52C997B71DB52DF400315811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C997B51DB52DF400315811 /* Main.storyboard */; };
@@ -21,8 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52B9D5B51DC0F9CD007A0CF1 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		52B9D5B71DC13A8A007A0CF1 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		52C997AE1DB52DF400315811 /* LocationAndMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationAndMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C997B11DB52DF400315811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52C997B31DB52DF400315811 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,8 +64,6 @@
 			children = (
 				52C997B11DB52DF400315811 /* AppDelegate.swift */,
 				52C997B31DB52DF400315811 /* ViewController.swift */,
-				52B9D5B51DC0F9CD007A0CF1 /* UserViewController.swift */,
-				52B9D5B71DC13A8A007A0CF1 /* Users.swift */,
 				52C997CB1DB53A2100315811 /* Model */,
 				52C997B51DB52DF400315811 /* Main.storyboard */,
 				52C997B81DB52DF400315811 /* Assets.xcassets */,
@@ -162,8 +156,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B9D5B81DC13A8A007A0CF1 /* Users.swift in Sources */,
-				52B9D5B61DC0F9CD007A0CF1 /* UserViewController.swift in Sources */,
 				52C997B41DB52DF400315811 /* ViewController.swift in Sources */,
 				52C997B21DB52DF400315811 /* AppDelegate.swift in Sources */,
 				52C997C61DB531AC00315811 /* Address.swift in Sources */,
@@ -329,7 +321,6 @@
 				52C997C21DB52DF400315811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
